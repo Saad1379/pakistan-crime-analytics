@@ -13,7 +13,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 const Map: React.FC = () => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: "AIzaSyCB1pHMrQ7NJVdpxWm9Vy3PGPep_nOqPRY",
+    googleMapsApiKey: String(process.env.NEXT_PUBLIC_GOOGLE_API_KEY),
   });
 
   const [map, setMap] = useState<google.maps.Map | null>(null);
