@@ -23,8 +23,8 @@ const Map: React.FC = () => {
   const [selectedMarker, setSelectedMarker] = useState<any>(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [center, setCenter] = useState({
-    lat: 30.415601,
-    lng: 70.889401,
+    lat: 31.069079,
+    lng: 72.776204,
   });
 
   const containerStyle = {
@@ -82,7 +82,8 @@ const Map: React.FC = () => {
         <GoogleMap
           mapContainerStyle={containerStyle}
           center={center}
-          zoom={8}
+          zoom={7}
+          options={{ minZoom: 6 }}
           onLoad={onLoad}
           onUnmount={onUnmount}
         >
